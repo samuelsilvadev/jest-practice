@@ -1,0 +1,28 @@
+{
+	"extends": [
+		"airbnb-base"
+	],
+	"parser": "babel-eslint",
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest/globals": true
+	},
+	"plugins": [
+		"jest"
+	],
+	"rules": {
+		"indent": [
+			2,
+			"tab"
+		],
+		"global-require": "off",
+		"no-unused-vars": "off",
+		"no-tabs": "off",
+		"strict": "off",
+		"arrow-body-style": "off",
+		"no-underscore-dangle": "off",
+		"arrow-parens": "off",
+		"no-console": "off"
+	}
+}
