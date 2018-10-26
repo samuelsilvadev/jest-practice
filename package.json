@@ -1,27 +1,36 @@
 {
-  "name": "jest-practice",
-  "version": "0.0.1",
-  "description": "Practical application to JEST",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
-  },
-  "keywords": [
-    "Jest",
-    "JS",
-    "Javascript",
-    "React"
-  ],
-  "author": "Samuel Silva",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.26.2",
-    "jest-cli": "^23.6.0"
-  }
+	"name": "jest-practice",
+	"version": "0.0.1",
+	"description": "Practical application to JEST",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"test:coverage": "jest --coverage",
+		"test:watch": "jest --watch"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.jsx?$": "babel-jest"
+		}
+	},
+	"keywords": [
+		"Jest",
+		"JS",
+		"Javascript",
+		"React"
+	],
+	"author": "Samuel Silva",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.1.2",
+		"babel-core": "^7.0.0-bridge.0",
+		"@babel/preset-env": "^7.1.0",
+		"babel-eslint": "^10.0.1",
+		"babel-jest": "^23.6.0",
+		"eslint": "^5.8.0",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jest": "^21.26.2",
+		"jest-cli": "^23.6.0"
+	}
 }
