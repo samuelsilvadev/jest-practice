@@ -23,6 +23,7 @@
 		"arrow-body-style": "off",
 		"no-underscore-dangle": "off",
 		"arrow-parens": "off",
-		"no-console": "off"
+		"no-console": "off",
+		"no-plusplus": "off"
 	}
 }
