@@ -23,11 +23,11 @@ describe('# ARRAY PROTOTYPE Module - EVERY', () => {
 		expect(every(arr, filterBiggerThanZero)).toBe(false);
 	});
 
-	it('should return false if no argument is passed', () => {
-		expect(every()).toBe(false);
+	it('should return `true` if no argument is passed', () => {
+		expect(every()).toBe(true);
 	});
 
-	it('should return false if only array is passed', () => {
-		expect(every([])).toBe(false);
+	it('should return `true` if only array is passed', () => {
+		expect(every([])).toBe(true);
 	});
 });
