@@ -4,7 +4,7 @@ function every(arr, callback) {
 			return true;
 		}
 
-		const head = arrayInternal.slice(0, 1);
+		const head = arrayInternal[0];
 		const tail = arrayInternal.slice(1);
 
 		return !callback(head, counter, arr) ? false : everyInternal(tail, counter + 1);
