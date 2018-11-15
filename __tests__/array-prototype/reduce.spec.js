@@ -1,4 +1,5 @@
 const reduce = require('../../modules/array-prototype/reduce');
+const reduceRight = require('../../modules/array-prototype/reduce-right');
 
 describe('# ARRAY PROTOTYPE Module - REDUCE', () => {
 	it('should return a function', () => {
@@ -23,7 +24,7 @@ describe('# ARRAY PROTOTYPE Module - REDUCE', () => {
 		expect(result).toBe(0);
 	});
 
-	it('should return { a0: 1 } when pass reduce([1], (acc, item, index) => { acc[a + index] = index; return acc; }, {})', () => {
+	it('should return { a0: 1 } when pass reduce([1], (acc, item, index) => { acc[a + index] = item; return acc; }, {})', () => {
 		const result = reduce([1], (acc, item, index) => {
 			acc[`a${index}`] = item;
 			return acc;
@@ -42,5 +43,11 @@ describe('# ARRAY PROTOTYPE Module - REDUCE', () => {
 
 	it('should throw an TypeError when pass reduce([], (acc, item) => acc + item)', () => {
 		expect(() => reduce([], (acc, item) => acc + item)).toThrowError('Reduce of empty array with no initial value');
+	});
+
+	it('should return `Hello World` when I pass `World Hello`', () => {
+		const result = reduceRight(['World', 'Hello '], (acc, item) => acc + item, '');
+
+		expect(result).toBe('Hello World');
 	});
 });
