@@ -1,4 +1,5 @@
 const reduce = require('../../modules/array-prototype/reduce-recursive');
+const reduceRight = require('../../modules/array-prototype/reduce-right-recursive');
 
 describe('# ARRAY PROTOTYPE Module - REDUCE RECURSIVE', () => {
 	it('should return a function', () => {
@@ -42,5 +43,11 @@ describe('# ARRAY PROTOTYPE Module - REDUCE RECURSIVE', () => {
 
 	it('should throw an TypeError when pass reduce([], (acc, item) => acc + item)', () => {
 		expect(() => reduce([], (acc, item) => acc + item)).toThrowError('Reduce of empty array with no initial value');
+	});
+
+	it('should return `Hello World` when I pass `World Hello`', () => {
+		const result = reduceRight(['World', 'Hello '], (acc, item) => acc + item, '');
+
+		expect(result).toBe('Hello World');
 	});
 });
