@@ -1,4 +1,8 @@
 function sumZero(array) {
+	if (!Array.isArray(array)) {
+		throw new TypeError('The argument needs to be an array');
+	}
+
 	let head = 0;
 	let tail = array.length - 1;
 
