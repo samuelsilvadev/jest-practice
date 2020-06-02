@@ -1,21 +1,14 @@
 {
-	"extends": [
-		"airbnb-base"
-	],
+	"extends": ["airbnb-base"],
 	"parser": "babel-eslint",
 	"env": {
 		"browser": true,
 		"node": true,
 		"jest/globals": true
 	},
-	"plugins": [
-		"jest"
-	],
+	"plugins": ["jest"],
 	"rules": {
-		"indent": [
-			2,
-			"tab"
-		],
+		"indent": [2, "tab"],
 		"global-require": "off",
 		"no-unused-vars": "off",
 		"no-tabs": "off",
@@ -24,6 +17,14 @@
 		"no-underscore-dangle": "off",
 		"arrow-parens": "off",
 		"no-console": "off",
-		"no-plusplus": "off"
+		"no-plusplus": "off",
+		"operator-linebreak": "off",
+		"no-continue": "off",
+		"no-restricted-syntax": [
+			"error",
+			"ForInStatement",
+			"LabeledStatement",
+			"WithStatement"
+		]
 	}
 }
